@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+ROOT_URLCONF = 'snack_tracker_project.urls'
 
 ROOT_URLCONF = 'snacks_crud_project.urls'
 
