@@ -9,7 +9,7 @@
     {% for snack in AllSnacks %}
     <div id="snackcard">
         <h3 id="cardname"> {{snack.name}} </h3>
-        <button type="button" id="Buttons"><a href="{% url 'snacksdetail' snack.id %}">snakes detail</a></button>
+        <button type="button" id="Buttons"><a href="{% url 'snack_detail' snack.id %}">snakes detail</a></button>
 
         <img src="{{snack.img_url}}" alt="{{snack.name}}" id="img" />
     </div>

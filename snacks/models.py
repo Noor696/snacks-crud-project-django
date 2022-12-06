@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-
+from django.urls import reverse
 # Create your models here.
 
 # each teble represent as a class in the model
@@ -40,3 +40,12 @@ class Snack(models.Model):
     def __str__(self):
         # to see the name of object(snack)
         return self.name
+
+    class Meta:
+        # verbose_name_plurer = "my things"
+        # ordering = ["pk"] # the defult order is primary key
+        ordering = ["-pk"] # reverse the order depends pk
+
+    def get_absolute_url(self):  # when add itam and click submit go to this url
+        return reverse("snack_detail", args={self.id})
+    
