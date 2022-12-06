@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView,ListView, DetailView
+from django.views.generic import TemplateView,ListView, DetailView, CreateView
 from .models import Snack
 
 # Create your views here.
@@ -19,4 +19,10 @@ class SnackDetailView(DetailView):
     template_name='snack_detail.html'
     # give it the model we want to show
     model = Snack # the table we want take the data from. 
+
+class SnackCreateView(CreateView): 
+    template_name='snack_create.html'
+    model = Snack 
+    fields = ['name' , 'img_url' , 'amount', 'description' , 'purchaser']
+
 
