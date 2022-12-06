@@ -1,0 +1,17 @@
+*{
+    background-color: whitesmoke;
+}
+
+#Buttons{
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    background-color: #004aac;
+    color: white;
+    border-radius: 5px;
+}
+
+#Buttons:hover {
+    background-color: #092953;
+    color: white;
+    border: none;
+}
