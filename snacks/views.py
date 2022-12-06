@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView,ListView, DetailView, CreateView, UpdateView
+from django.views.generic import TemplateView,ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Snack
+from django.urls import reverse_lazy  # reverse_lazy wait me until i delete or update after that take me to a specific path
 
 # Create your views here.
 class HomePage(TemplateView): 
@@ -30,4 +31,7 @@ class SnackUpdateView(UpdateView):
     model = Snack 
     fields = ['name' , 'img_url' , 'amount', 'description' , 'purchaser'] # we can remove any fileld we didn't want updated
 
-
+class SnackDeleteView(DeleteView):
+    template_name='snack_delete.html'
+    model = Snack
+    success_url = reverse_lazy('snacks')
