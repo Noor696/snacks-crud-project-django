@@ -15,3 +15,8 @@ class SnackListView(ListView):
     # if we want change name of {object list}
     context_object_name = "AllSnacks"
 
+class SnackDetailView(DetailView): 
+    template_name='snack_detail.html'
+    # give it the model we want to show
+    model = Snack # the table we want take the data from. 
+

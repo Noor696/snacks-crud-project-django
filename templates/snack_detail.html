@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+    <h1>snack detail</h1>
+    <h3 id="cardname">{{snack.name}} </h3>
+    <img src="{{snack.img_url}}" alt="{{snack.name}}" id="img" />
+    <h3 id="cardname">{{snack.description}} </h3>
+    <h3 id="cardname">purchaser: {{snack.purchaser}} </h3>
+    <h3 id="cardname">amount: {{snack.amount}} </h3>
+
+
+    
+
+{% endblock content %}
