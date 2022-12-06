@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView,ListView, DetailView, CreateView
+from django.views.generic import TemplateView,ListView, DetailView, CreateView, UpdateView
 from .models import Snack
 
 # Create your views here.
@@ -24,5 +24,10 @@ class SnackCreateView(CreateView):
     template_name='snack_create.html'
     model = Snack 
     fields = ['name' , 'img_url' , 'amount', 'description' , 'purchaser']
+
+class SnackUpdateView(UpdateView):
+    template_name='snack_update.html'
+    model = Snack 
+    fields = ['name' , 'img_url' , 'amount', 'description' , 'purchaser'] # we can remove any fileld we didn't want updated
 
 
